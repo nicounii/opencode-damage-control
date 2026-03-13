@@ -1,0 +1,52 @@
+{
+  "name": "opencode-damage-control",
+  "version": "1.0.0",
+  "description": "Security plugin for OpenCode that blocks dangerous commands and protects sensitive files",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest --coverage",
+    "lint": "biome check .",
+    "format": "biome format --write ."
+  },
+  "keywords": [
+    "opencode",
+    "opencode-plugin",
+    "security",
+    "damage-control",
+    "cli-security",
+    "agent-safety"
+  ],
+  "author": "nicounii",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicounii/opencode-damage-control.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nicounii/opencode-damage-control/issues"
+  },
+  "homepage": "https://github.com/nicounii/opencode-damage-control#readme",
+  "dependencies": {
+    "@opencode-ai/plugin": "^1.2.25",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.0",
+    "@types/node": "^25.5.0",
+    "esbuild": "^0.24.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  },
+  "opencode": {
+    "plugins": ["damage-control"]
+  },
+  "files": [
+    "dist",
+    "src/config"
+  ]
+}
