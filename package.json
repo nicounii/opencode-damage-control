@@ -1,5 +1,5 @@
 {
-  "name": "opencode-damage-control",
+  "name": "opencode-damage-restriction",
   "version": "1.0.0",
   "description": "Security plugin for OpenCode that blocks dangerous commands and protects sensitive files",
   "main": "dist/index.js",
@@ -17,7 +17,7 @@
     "opencode",
     "opencode-plugin",
     "security",
-    "damage-control",
+    "damage-restriction",
     "cli-security",
     "agent-safety"
   ],
@@ -25,12 +25,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nicounii/opencode-damage-control.git"
+    "url": "git+https://github.com/nicounii/opencode-damage-restriction.git"
   },
   "bugs": {
-    "url": "https://github.com/nicounii/opencode-damage-control/issues"
+    "url": "https://github.com/nicounii/opencode-damage-restriction/issues"
   },
-  "homepage": "https://github.com/nicounii/opencode-damage-control#readme",
+  "homepage": "https://github.com/nicounii/opencode-damage-restriction#readme",
   "dependencies": {
     "@opencode-ai/plugin": "^1.2.25",
     "zod": "^3.24.0"
@@ -43,7 +43,7 @@
     "vitest": "^2.1.0"
   },
   "opencode": {
-    "plugins": ["damage-control"]
+    "plugins": ["damage-restriction"]
   },
   "files": [
     "dist",

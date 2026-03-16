@@ -1,6 +1,6 @@
 # OpenCode Damage Control
 
-[![npm version](https://img.shields.io/npm/v/opencode-damage-control.svg)](https://www.npmjs.com/package/opencode-damage-control)
+[![npm version](https://img.shields.io/npm/v/opencode-damage-restriction.svg)](https://www.npmjs.com/package/opencode-damage-restriction)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Test Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen.svg)](#)
 
@@ -22,7 +22,7 @@ In your `opencode.json`:
 
 ```json
 {
-  "plugin": ["opencode-damage-control"]
+  "plugin": ["opencode-damage-restriction"]
 }
 ```
 
@@ -30,7 +30,7 @@ Or for local development:
 
 ```json
 {
-  "plugin": ["file:///path/to/opencode-damage-control/dist/index.js"]
+  "plugin": ["file:///path/to/opencode-damage-restriction/dist/index.js"]
 }
 ```
 
@@ -147,7 +147,7 @@ bun test --coverage
 ### Project Structure
 
 ```
-opencode-damage-control/
+opencode-damage-restriction/
 ├── src/
 │   ├── index.ts              # Plugin entry point
 │   ├── hooks/
