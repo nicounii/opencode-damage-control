@@ -29,6 +29,30 @@
       "reason": "rmdir ignore-fail"
     },
     {
+      "pattern": "\\brm\\s+.*\\$\\{?HOME\\}?",
+      "reason": "rm targeting $HOME directory — catastrophic"
+    },
+    {
+      "pattern": "\\brm\\s+.*~",
+      "reason": "rm targeting home directory (~)"
+    },
+    {
+      "pattern": "\\brm\\s+.*\\$\\{?USER\\}?",
+      "reason": "rm targeting $USER directory"
+    },
+    {
+      "pattern": "\\brm\\s+-[rRf]+\\s+([^;&|]+\\s+){5,}",
+      "reason": "rm with too many targets — review manually"
+    },
+    {
+      "pattern": "\\brm\\s+.*2>/dev/null",
+      "reason": "rm with suppressed errors — hiding destruction"
+    },
+    {
+      "pattern": "\\brm\\s+.*\\s+[&;]\\s*2>/dev/null",
+      "reason": "rm chained with error suppression"
+    },
+    {
       "pattern": "\\bchmod\\s+(-[^\\s]+\\s+)*777\\b",
       "reason": "chmod 777 (world writable)"
     },
@@ -418,6 +442,8 @@
     "*-secret.yaml",
     "secrets.yaml",
     "~/.docker/",
+    "$HOME",
+    "~",
     "*.pem",
     "*.key",
     "*.p12",
